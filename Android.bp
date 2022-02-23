@@ -2,6 +2,15 @@ android_library {
 
     name: "VendorSupport-Libs",
 
+    optimize: {
+        enabled: false,
+    },
+
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt"
+    ],
+
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
@@ -9,8 +18,11 @@ android_library {
         "androidx.recyclerview_recyclerview",
     ],
 
-    resource_dirs: ["res"],
-    srcs: ["src/**/*.java"],
+    resource_dirs: [
+        "res",
+        "res-orig",
+        "res-qr"
+    ],
     min_sdk_version: "21",
 
 }
