@@ -3,15 +3,27 @@ android_library {
     name: "VendorSupport-Libs",
 
     static_libs: [
+       "androidx.annotation_annotation",
+        "androidx-constraintlayout_constraintlayout",
         "androidx.core_core",
         "androidx.preference_preference",
         "androidx.appcompat_appcompat",
         "androidx.recyclerview_recyclerview",
+        "kotlinx_coroutines_android",
+        "com.google.android.material_material",
+        "kotlinx_coroutines",
+        "androidx.core_core-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "SettingsLibSettingsTheme",
+        "SettingsLibTwoTargetPreference",
         "SettingsLibMainSwitchPreference"
     ],
 
     resource_dirs: ["res"],
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/com/pixys/support/**/*.kt",
+        "src/**/*.java",
+    ],
     min_sdk_version: "21",
 
 }
